@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MemberController!{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">Welcome
+        {% if app.user %}{{ app.user.logginname }}
+        {% endif %}
+    </h1>
+     <p>dit is een member page </p>
+    <h4>de dieren in het dierenrijk </h4>
+
+    {% for animal in animals %}
+       <h6> dier name: {{ animal.name }}</h6>
+       <h6> beschrijving: {{ animal.description }}</h6>
+       <h6> land name : {{ animal.user.part}}</h6>
+    {% endfor %}
+
+
+{% endblock %}
