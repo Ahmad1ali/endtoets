@@ -13,8 +13,11 @@
     {% for dier in show %}
         <h6> dier name: {{ dier.name }}</h6>
         <h6> beschrijving: {{ dier.description }}</h6>
-{#        <h6> land name : {{ dier.user.part}}</h6>#}
+        <a href="{{ path ('delete',{id: dier.id}) }}" class="btn btn-dark">delete</a>
+
     {% endfor %}
+     <a href="{{ path ('insert') }}" class="btn btn-dark">add</a>
+
 
 
 {% endblock %}
